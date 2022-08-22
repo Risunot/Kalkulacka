@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Kalkulačka</title>
 <link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
 </head>
 
 <body>
@@ -12,29 +13,29 @@
             <p id="display_value"></p>
         </header>
         <main class="buttons-container">
-            <input type="button" class="grid-item" value="(" onclick="addValue('(')">
-            <input type="button" class="grid-item" value=")" onclick="addValue(')')">
-            <input type="button" class="grid-item" value="%" onclick="addValue('%')">
-            <input type="button" class="grid-item" value="AC" onclick="reset()">
-            <input type="button" class="grid-item number" value="7" onclick="addValue('7')">
-            <input type="button" class="grid-item number" value="8" onclick="addValue('8')">
-            <input type="button" class="grid-item number" value="9" onclick="addValue('9')">
-            <input type="button" class="grid-item" value="/" onclick="addValue('/')">
-            <input type="button" class="grid-item number" value="4" onclick="addValue('4')">
-            <input type="button" class="grid-item number" value="5" onclick="addValue('5')">
-            <input type="button" class="grid-item number" value="6" onclick="addValue('6')">
-            <input type="button" class="grid-item" value="*" onclick="addValue('*')">
-            <input type="button" class="grid-item number" value="1" onclick="addValue('1')">
-            <input type="button" class="grid-item number" value="2" onclick="addValue('2')">
-            <input type="button" class="grid-item number" value="3" onclick="addValue('3')">
-            <input type="button" class="grid-item" value="-" onclick="addValue('-')">
-            <input type="button" class="grid-item number" value="0" onclick="addValue('0')">
-            <input type="button" class="grid-item number" value="." onclick="addValue('.')">
-            <input type="button" class="grid-item number equals" value="=" onclick="equals()">
-            <input type="button" class="grid-item" value="+" onclick="addValue('+')">
+            <input type="button" class="grid-item" value="(" onclick="Calculator.addValue('(')">
+            <input type="button" class="grid-item" value=")" onclick="Calculator.addValue(')')">
+            <input type="button" class="grid-item" value="%" onclick="Calculator.addValue('%')">
+            <input type="button" class="grid-item" value="AC" onclick="Calculator.reset()">
+            <input type="button" class="grid-item number" value="7" onclick="Calculator.addValue('7')">
+            <input type="button" class="grid-item number" value="8" onclick="Calculator.addValue('8')">
+            <input type="button" class="grid-item number" value="9" onclick="Calculator.addValue('9')">
+            <input type="button" class="grid-item" value="/" onclick="Calculator.addValue('/')">
+            <input type="button" class="grid-item number" value="4" onclick="Calculator.addValue('4')">
+            <input type="button" class="grid-item number" value="5" onclick="Calculator.addValue('5')">
+            <input type="button" class="grid-item number" value="6" onclick="Calculator.addValue('6')">
+            <input type="button" class="grid-item" value="*" onclick="Calculator.addValue('*')">
+            <input type="button" class="grid-item number" value="1" onclick="Calculator.addValue('1')">
+            <input type="button" class="grid-item number" value="2" onclick="Calculator.addValue('2')">
+            <input type="button" class="grid-item number" value="3" onclick="Calculator.addValue('3')">
+            <input type="button" class="grid-item" value="-" onclick="Calculator.addValue('-')">
+            <input type="button" class="grid-item number" value="0" onclick="Calculator.addValue('0')">
+            <input type="button" class="grid-item number" value="." onclick="Calculator.addValue('.')">
+            <input type="button" class="grid-item number equals" value="=" onclick="Calculator.equals()">
+            <input type="button" class="grid-item" value="+" onclick="Calculator.addValue('+')">
         </main>
     </div>
 </body>
-<script src="app.js"></script>
+
 
 </html>
