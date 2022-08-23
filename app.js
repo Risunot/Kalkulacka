@@ -1,5 +1,3 @@
-
-
 function reset() {
     document.getElementById("display_value").innerHTML = "";
 }
