@@ -4,10 +4,14 @@ const calculator = {
     },
     addValue: function(value) {
         let lastCharacter = document.getElementById("display_value").innerHTML;
-        if (lastCharacter.slice(-1) == "+" && (value == "+" || value == "-" || value == "*" || value == "/")
-             || lastCharacter.slice(-1) == "-" && (value == "-" || value == "+" || value == "*" || value == "/")
-             || lastCharacter.slice(-1) == "*" && (value == "*" || value == "+" || value == "-" || value == "/")
-             || lastCharacter.slice(-1) == "/" && (value == "/" || value == "+" || value == "-" || value == "*")) {
+        if (lastCharacter.slice(-1) == "+" && (value == "+" || value == "-" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
+            || lastCharacter.slice(-1) == "-" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
+            || lastCharacter.slice(-1) == "*" && (value == "*" || value == "+" || value == "-" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
+            || lastCharacter.slice(-1) == "/" && (value == "/" || value == "+" || value == "-" || value == "*" || value == "%" || value == "(" || value == ")" || value == ".")
+            || lastCharacter.slice(-1) == "%" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".") 
+            || lastCharacter.slice(-1) == "(" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".") 
+            || lastCharacter.slice(-1) == ")" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
+            || lastCharacter.slice(-1) == "." && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")) {
              return false;
              }
              document.getElementById("display_value").innerHTML += value;
