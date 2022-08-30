@@ -1,26 +1,23 @@
-function reset() {
-    document.getElementById("display_value").innerHTML = "";
-}
+const operators = ["+", "-", "*", "/"];
 
-function addValue(value) {
-   let lastCharacter = document.getElementById("display_value").innerHTML;
-   if (lastCharacter.slice(-1) == "+" && (value == "+" || value == "-" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
-        || lastCharacter.slice(-1) == "-" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
-        || lastCharacter.slice(-1) == "*" && (value == "*" || value == "+" || value == "-" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
-        || lastCharacter.slice(-1) == "/" && (value == "/" || value == "+" || value == "-" || value == "*" || value == "%" || value == "(" || value == ")" || value == ".")
-        || lastCharacter.slice(-1) == "%" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".") 
-        || lastCharacter.slice(-1) == "(" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".") 
-        || lastCharacter.slice(-1) == ")" && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")
-        || lastCharacter.slice(-1) == "." && (value == "-" || value == "+" || value == "*" || value == "/" || value == "%" || value == "(" || value == ")" || value == ".")) {
-    return false;
-   }
-   
-   document.getElementById("display_value").innerHTML += value;
-   console.log(typeof value)
+function reset() {
+    document.getElementById("display_value").textContent = "";
 }
 
 function equals() {
-    let result = document.getElementById("display_value").innerHTML;
+    let result = document.getElementById("display_value").textContent;
     
-    document.getElementById("display_value").innerHTML  = eval(result);
+    document.getElementById("display_value").textContent  = eval(result);
+}
+
+function addNumber(value) {
+    document.getElementById("display_value").textContent += value;
+}
+
+function addOperator(value) {
+    let lastCharacter = document.getElementById("display_value").textContent.slice(-1);
+    
+    if(!operators.includes(lastCharacter)) {
+       document.getElementById("display_value").textContent += value;
+    }   
 }
